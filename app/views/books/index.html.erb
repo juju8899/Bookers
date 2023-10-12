@@ -1,14 +1,20 @@
 <h1>一覧</h1>
- <% @books.each do |book| %>
-  <span>
-   <!--<%= link_to book.title, book_path(book.id) %>-->
-    <%= book.title %>
-  </span>
+<table border="1">
+   <th>タイトル</th>
+   <th>感想</th>
+   <th>メニュー</th>
 
- <p>感想</p>
- <span><%= book.body %></span>
+   <tb><% @books.each do |book| %>
 
-<% end %>
+   <tr>
+   <td><%= book.title %></td>
+   <td><%= book.body %></td>
+   </tr>
+
+   <% end %>
+   </tb>
+</table>
+
 
 <h1>新規投稿</h1>
 
